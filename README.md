@@ -8,7 +8,7 @@
 **WebSploit** is a web stress testing and pentesting tool, offering a useful set of tools to perform **web level** attacks.
 
 <p align="center">
-<img align="center" src="img/websploitSS.png" width="900">
+<img align="center" src="img/wsss.png" width="900">
 </p>
 
 Disclaimer: **I am under no circumstances responsible of any wrong way this app is used. Meant only for educational purposes and white hat hacking.**
