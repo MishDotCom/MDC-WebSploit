@@ -1,5 +1,6 @@
 # WebSploit 
-[![GPLv3](https://img.shields.io/badge/license-GPLv3-blue)](https://img.shields.io/badge/license-GPLv3-blue)
+[![GPLv3](https://img.shields.io/badge/license-GPLv2-blue)](https://img.shields.io/badge/license-GPLv3-blue)
+[![C#](https://img.shields.io/badge/language-csharp-red)](https://img.shields.io/badge/language-c#-red)
 
 <h2>Description</h2>
 
