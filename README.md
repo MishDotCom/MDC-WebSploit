@@ -20,7 +20,7 @@ Websploit offers a shell like interface with the following commands:
 ```text
   > Information gathering:
 '-port-scan'  Scans a given target for open ports.
-'-ipgr'       Returns the public ip address of a given host.
+'-ipgr'       Tool similar to nmap.
   > Password attacks:
 '-ftplogger'  Ftp server credentials bruteforcer.
 '-sshfucker'  Ssh credentials bruteforce app.
