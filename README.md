@@ -1,5 +1,5 @@
 # WebSploit 
-[![version-1.1](https://img.shields.io/badge/version-1.1-green)](https://github.com/MishDotCom/WebSploit/releases/tag/v1.1)
+[![version-1.2](https://github.com/MishDotCom/WebSploit/releases/tag/v1.2)
 [![GPLv3](https://img.shields.io/badge/license-GPLv2-blue)](https://img.shields.io/badge/license-GPLv3-blue)
 [![C#](https://img.shields.io/badge/language-csharp-red)](https://img.shields.io/badge/language-c#-red)
 
