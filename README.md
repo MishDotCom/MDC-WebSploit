@@ -19,18 +19,18 @@ Websploit offers a shell like interface with the following commands:
 
 ```text
   > Information gathering:
-'-port-scan'  Scans a given target for open ports.
+'-prts'  Scans a given target for open ports.
 '-ipgr'       Tool similar to nmap.
   > Password attacks:
-'-ftplogger'  Ftp server credentials bruteforcer.
-'-sshfucker'  Ssh credentials bruteforce app.
-'-email-cracker' Email (SMTP) login credentials bruteforce app.
+'-ftpl'  Ftp server credentials bruteforcer.
+'-sshf'  Ssh credentials bruteforce app.
+'-ecrk' Email (SMTP) login credentials bruteforce app.
   > Stress testing:
 '-uddos'      Complete DDoS and stress testing tool for all web protocols (HTTP/HTTPS/TCP/UDP)
   > Other:
-'-help'       Provides the command list.
-'-clear'      Refreshes the shell screen.
-'-exit'       Closes WebSploit.
+'help'       Provides the command list.
+'cls'      Refreshes the shell screen.
+'exit'       Closes WebSploit.
 ```
 Each tool has it's own command syntax. In WebSploit type '<TOOL'S NAME> -help' for the tool's command list.
 
