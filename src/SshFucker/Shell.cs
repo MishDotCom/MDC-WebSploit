@@ -15,7 +15,7 @@ namespace SshAttacker
                 if(command_words[1] == "-help")
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("[SYNTAX] > -sshfucker <TARGET_IP_ADDRESS>(port 22 must be open) <USER_LISTR>(type '-b' for built-in) <PASS_LIST>(type '-b' for built-in)");
+                    Console.WriteLine("[SYNTAX] > -sshf <TARGET_IP_ADDRESS>(port 22 must be open) <USER_LISTR>(type '-b' for built-in) <PASS_LIST>(type '-b' for built-in)");
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 else
@@ -43,7 +43,7 @@ namespace SshAttacker
                                     else
                                     {
                                         Console.ForegroundColor = ConsoleColor.Red;
-                                        Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid syntax [{command_words[3]}]!\n");
+                                        Console.WriteLine($"[!]-[websploit@sshf] ~$ Invalid syntax [{command_words[3]}]!\n");
                                         Console.ForegroundColor = ConsoleColor.White;
                                     }
                                     
@@ -64,28 +64,28 @@ namespace SshAttacker
                                     else
                                     {
                                         Console.ForegroundColor = ConsoleColor.Red;
-                                        Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid syntax [{command_words[3]}]! Type '-ftplogger -help'\n");
+                                        Console.WriteLine($"[!]-[websploit@sshf] ~$ Invalid syntax [{command_words[3]}]! Type '-sshf -help'\n");
                                         Console.ForegroundColor = ConsoleColor.White;
                                     } 
                                 }
                                 else
                                 {
                                     Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid syntax [{command_words[2]}]! Type '-ftplogger -help'\n");
+                                    Console.WriteLine($"[!]-[websploit@sshf] ~$ Invalid syntax [{command_words[2]}]! Type '-sshf -help'\n");
                                     Console.ForegroundColor = ConsoleColor.White;
                                 }
                             }
                             else
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid ip address [{command_words[1]}]! Port 22 is closed. Type '-ftplogger -help'\n");
+                                Console.WriteLine($"[!]-[websploit@sshf] ~$ Invalid ip address [{command_words[1]}]! Port 22 is closed. Type '-sshf -help'\n");
                                 Console.ForegroundColor = ConsoleColor.White;
                             }
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid syntax [{command}]! Type '-ftplogger -help'\n");
+                            Console.WriteLine($"[!]-[websploit@sshf] ~$ Invalid syntax [{command}]! Type '-sshf -help'\n");
                             Console.ForegroundColor = ConsoleColor.White;
                         }
                     }
@@ -94,7 +94,7 @@ namespace SshAttacker
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid syntax [{command}]! Type '-ftplogger -help'\n");
+                Console.WriteLine($"[!]-[websploit@sshf] ~$ Invalid syntax [{command}]! Type '-sshf -help'\n");
                 Console.ForegroundColor = ConsoleColor.White;
             }
         }

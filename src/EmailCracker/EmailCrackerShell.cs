@@ -94,7 +94,7 @@ namespace EmailCracker
         static void ThrowErr(string err)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"[!]-[websploit@email-cracker] : {err}. Type '-email-cracker -help'.");
+            Console.WriteLine($"[!]-[websploit@email-cracker] : {err}. Type '-ecrk -help'.");
             Console.ForegroundColor = ConsoleColor.White;
         }
 
@@ -112,7 +112,7 @@ namespace EmailCracker
         static void Help()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("[SYNTAX] > -email-cracker <SMTP_SERVER> <SMTP_PORT> <TARGET> <-P <PATH TO WORDLIST>/--p for built-in (rockyou.txt)> <OPT: -v for verbose>\n");
+            Console.WriteLine("[SYNTAX] > -ecrk <SMTP_SERVER> <SMTP_PORT> <TARGET> <-P <PATH TO WORDLIST>/--p for built-in (rockyou.txt)> <OPT: -v for verbose>\n");
             Console.ForegroundColor = ConsoleColor.White;
         }
     }

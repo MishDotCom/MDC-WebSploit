@@ -23,7 +23,7 @@ namespace FtpLogger
                 if(command_words[1] == "-help")
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("[SYNTAX] > -ftplogger <TARGET_IP_ADDRESS> <USER_LISTR>(type '-b' for built-in) <PASS_LIST>(type '-b' for built-in)");
+                    Console.WriteLine("[SYNTAX] > -ftpl <TARGET_IP_ADDRESS> <USER_LISTR>(type '-b' for built-in) <PASS_LIST>(type '-b' for built-in)");
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 else
@@ -49,7 +49,7 @@ namespace FtpLogger
                                 else
                                 {
                                     Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid syntax [{command_words[3]}]!\n");
+                                    Console.WriteLine($"[!]-[websploit@ftpl] ~$ Invalid syntax [{command_words[3]}]!\n");
                                     Console.ForegroundColor = ConsoleColor.White;
                                 }
                                 
@@ -70,28 +70,28 @@ namespace FtpLogger
                                 else
                                 {
                                     Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid syntax [{command_words[3]}]! Type '-ftplogger -help'\n");
+                                    Console.WriteLine($"[!]-[websploit@ftpl] ~$ Invalid syntax [{command_words[3]}]! Type '-ftplogger -help'\n");
                                     Console.ForegroundColor = ConsoleColor.White;
                                 } 
                             }
                             else
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid syntax [{command_words[2]}]! Type '-ftplogger -help'\n");
+                                Console.WriteLine($"[!]-[websploit@ftpl] ~$ Invalid syntax [{command_words[2]}]! Type '-ftplogger -help'\n");
                                 Console.ForegroundColor = ConsoleColor.White;
                             }
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid ip address [{command_words[1]}]! Type '-ftplogger -help'\n");
+                            Console.WriteLine($"[!]-[websploit@ftpl] ~$ Invalid ip address [{command_words[1]}]! Type '-ftplogger -help'\n");
                             Console.ForegroundColor = ConsoleColor.White;
                         }
                     }
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid syntax [{command}]! Type '-ftplogger -help'\n");
+                        Console.WriteLine($"[!]-[websploit@ftpl] ~$ Invalid syntax [{command}]! Type '-ftplogger -help'\n");
                         Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
@@ -99,7 +99,7 @@ namespace FtpLogger
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"[!]-[websploit@ftplogger] ~$ Invalid syntax [{command}]! Type '-ftplogger -help'\n");
+                Console.WriteLine($"[!]-[websploit@ftpl] ~$ Invalid syntax [{command}]! Type '-ftplogger -help'\n");
                 Console.ForegroundColor = ConsoleColor.White;
             }
         }
@@ -143,7 +143,7 @@ namespace FtpLogger
                         }
                         Console.WriteLine(response.StatusDescription + " " + response.StatusCode);
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"[+]-[echo@ftplogger] ~$ Login credentials found: usr {usr.Trim()} , pass {pass.Trim()}");
+                        Console.WriteLine($"[+]-[echo@ftpl] ~$ Login credentials found: usr {usr.Trim()} , pass {pass.Trim()}");
                         if (!written_sesion)
                             WriteSession(final_ip, pass, usr, main_counter, true);
                         Console.ReadLine();

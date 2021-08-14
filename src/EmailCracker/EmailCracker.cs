@@ -51,6 +51,7 @@ namespace EmailCracker
                             Console.WriteLine($"[+] Password successfully found: {pass}.");
                             Console.ForegroundColor = ConsoleColor.Yellow;
                             Console.WriteLine("[VERBOSE] : Finishing child elements before returning...");
+                            Environment.Exit(1);
                             Console.ForegroundColor = ConsoleColor.White;
                             cts.Cancel();
                         }

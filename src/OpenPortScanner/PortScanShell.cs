@@ -24,7 +24,7 @@ namespace Open_Port_Scanner
                             {
                                 if(Int32.TryParse(command_words[3], out int port) && port > 0)
                                 {
-                                    Console.WriteLine($"port-scan> Initiating port-scan on {target}...");
+                                    Console.WriteLine($"prtsc> Initiating port-scan on {target}...");
                                     Task task = Task.Factory.StartNew(() => {
                                         TcpPortScanner.ScanSinglePort(target, port);
                                     });
@@ -53,7 +53,7 @@ namespace Open_Port_Scanner
                                     }
                                     if(ports_lst.Count >= 1)
                                     {
-                                        Console.WriteLine($"port-scan> Initiating port-scan on {target}...");
+                                        Console.WriteLine($"prtsc> Initiating port-scan on {target}...");
                                         Task task = Task.Factory.StartNew(() => {
                                             Controller.MainTCPPortScan(target, ports_lst.ToArray());
                                         });
@@ -74,7 +74,7 @@ namespace Open_Port_Scanner
                             {
                                 if(command_words[3] == "-20")
                                 {
-                                    Console.WriteLine($"port-scan> Initiating port-scan on {target}...");
+                                    Console.WriteLine($"prtsc> Initiating port-scan on {target}...");
                                     Task task = Task.Factory.StartNew(() => {
                                         Controller.MainTCPPortScan(target, TcpPortScanner._20_ports);
                                     });
@@ -82,7 +82,7 @@ namespace Open_Port_Scanner
                                 }
                                 else if(command_words[3] == "-200")
                                 {
-                                    Console.WriteLine($"port-scan> Initiating port-scan on {target}...");
+                                    Console.WriteLine($"prtsc> Initiating port-scan on {target}...");
                                     Task task = Task.Factory.StartNew(() => {
                                         Controller.MainTCPPortScan(target, TcpPortScanner._200_ports_tcp);
                                     });
@@ -112,14 +112,14 @@ namespace Open_Port_Scanner
         static void InvalidSyntax(string cmd)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"[!]-[websploit/port-scan/err_logger] > Invalid command ['{cmd}']. Type '-port-scan -help'\n");
+            Console.WriteLine($"[!]-[websploit/prtsc/err_logger] > Invalid command ['{cmd}']. Type '-prtsc -help'\n");
             Console.ForegroundColor = ConsoleColor.White;
         }
 
         static void Help()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\n[SYNTAX] > -port-scan <TARGET>(IP address) <SUBTASK>\n");
+            Console.WriteLine("\n[SYNTAX] > -prtsc <TARGET>(IP address) <SUBTASK>\n");
             Console.WriteLine("> Subtask commands:");
             Console.WriteLine("[CMD] : '-p' Scans an individual port (SYNTAX : -p <PORT> ex: -p 21)");
             Console.WriteLine("[CMD] : '-P' Scans a given list of ports (SYNTAX : -P <PORT,PORT,PORT> ex: -P 21,22,25)");
