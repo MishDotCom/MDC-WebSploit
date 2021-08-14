@@ -37,18 +37,18 @@ Each tool has it's own command syntax. In WebSploit type '<TOOL'S NAME> -help' f
 ## Installation ⚙️
 
 <h2>For windows:</h2>
-1. Download the folder called <code>websploit win-x86.zip</code>.
-2. Extract the folder and place it in a directory of your choice.
-3. Run the file called <code>WebSploit.exe</code> in CMD or PowerShell as Administartor.
+1. Download the folder called <code>websploit win-x86.zip</code>.<br>
+2. Extract the folder and place it in a directory of your choice.<br>
+3. Run the file called <code>WebSploit.exe</code> in CMD or PowerShell as Administartor.<br>
 
-Disclaimer: **Do NOT remove any of the .dll files or the app will cease to work.**
+Disclaimer: **Do NOT remove any of the .dll files or the app will cease to work.**<br>
 
 <h2>For linux-debian:</h2>
-1. Download the folder called <code>WebSploit deb-x64.zip</code>
-2. Extract the folder.
-3. Open a terminal and CD into the folder
-4. Run <code>chmod 777 ./WebSploit</code>
-5. Run the app using <code>./WebSploit</code>
+1. Download the folder called <code>WebSploit deb-x64.zip</code><br>
+2. Extract the folder.<br>
+3. Open a terminal and CD into the folder.<br>
+4. Run <code>chmod 777 ./WebSploit</code><br>
+5. Run the app using <code>sudo ./WebSploit</code><br>
 
 ## Credits 💡
 
