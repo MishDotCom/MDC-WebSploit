@@ -13,7 +13,7 @@ Disclaimer: **I am under no circumstances responsible of any wrong way this app 
 
 <h2>Commands and Tools 🧰</h2>
 
-Websploit offers a shell like interface with the following commands:
+MDC-WebSploit is supposed tyo be ran in a terminal or a CLI. The commands and arguments are >>
 
 ```text
 ---------------------------------------------------
@@ -80,7 +80,6 @@ Websploit offers a shell like interface with the following commands:
 Gloria mwah <33
 ---------------------------------------------------
 ```
-Each tool has it's own command syntax. In WebSploit type '<TOOL'S NAME> -help' for the tool's command list.
 
 ## Installation ⚙️
 
