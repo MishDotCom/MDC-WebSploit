@@ -24,7 +24,7 @@ namespace Open_Port_Scanner
                     try
                     {
                         var res = client.BeginConnect(ip, port, null, null);
-                        bool connected = res.AsyncWaitHandle.WaitOne(TimeSpan.FromMilliseconds(1000));
+                        bool connected = res.AsyncWaitHandle.WaitOne(TimeSpan.FromMilliseconds(2000));
                         if(connected)
                         {
                             openPorts.Add(port);
@@ -47,7 +47,7 @@ namespace Open_Port_Scanner
                 try
                     {
                     var res = client.BeginConnect(ip, port, null, null);
-                    bool connected = res.AsyncWaitHandle.WaitOne(TimeSpan.FromMilliseconds(1000));
+                    bool connected = res.AsyncWaitHandle.WaitOne(TimeSpan.FromMilliseconds(1500));
                     if(connected)
                     {
                         Console.WriteLine($"prtsc> Port {port} is open on {ip}.\n");

