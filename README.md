@@ -18,19 +18,69 @@ Disclaimer: **I am under no circumstances responsible of any wrong way this app 
 Websploit offers a shell like interface with the following commands:
 
 ```text
-  > Information gathering:
-'-prts'  Scans a given target for open ports.
-'-ipgr'       Tool similar to nmap.
-  > Password attacks:
-'-ftpl'  Ftp server credentials bruteforcer.
-'-sshf'  Ssh credentials bruteforce app.
-'-ecrk' Email (SMTP) login credentials bruteforce app.
-  > Stress testing:
-'-uddos'      Complete DDoS and stress testing tool for all web protocols (HTTP/HTTPS/TCP/UDP)
-  > Other:
-'help'       Provides the command list.
-'cls'      Refreshes the shell screen.
-'exit'       Closes WebSploit.
+---------------------------------------------------
+       MDC-WebSploit v1.4 CLI. Help Menu >>
+---------------------------------------------------
+>> Information gathering: 
+'-prtsc' - Multithreaded port scanner. 
+       [SYNTAX] : -prtsc <TARGET> <OPTION>
+       > '-prtsc' Options: 
+          '-p' Scans only one given port.
+          '-P' Scans a given list of comma sepraretd ports.
+          '--p <OPTION>' Scans built-in list of ports.
+                > '--p' Options: 
+                   '-20' Top 20 most common ports.
+                   '-200' Top 200 most common ports.
+'-nscn' - Network scanning tool. 
+          [SYNATX] : -nscn <OPTION> <TARGET> 
+          > '-nscn' Options : 
+            '-gh' Retreives host of given website.
+            '-ph <OPTION>' Pings a given host.
+             > '-ph' Options: [OPTIONAL]
+               '-b <NUM Of BYTES>' Sets the ping number of bytes.
+            '-pLan' Finds open hosts on the given network.
+>> Passwords and credential attacks:
+'-ftpl' - FTP Server credentials bruteforcing app.
+          [SYNATX] : -ftpl <TARGET> <USR LIST PATH> <PASS LIST PATH>
+          > '-ftpl' Options:
+             '-b' For built-in dictionaries.
+             ex: [SYNATX] : -ftpl <TARGET> -b -b
+'-sshf' - SSH Server credentials bruteforcing app.
+          [SYNATX] : -sshf <TARGET> <USR LIST PATH> <PASS LIST PATH>
+          > '-sshf' Options:
+             '-b' For built-in dictionaries.
+             ex: [SYNATX] : -sshf <TARGET> -b -b
+'-ecrk' - Email (SMTP) credentials bruteforce app.
+          [SYNTAX] : -ecrk <SMTP_SERVER> <SMTP_PORT> <TARGET> <-P <PATH TO WORDLIST>/--p for built-in (rockyou.txt)> <OPT: -v for verbose>
+>> Stress testing:
+'-uddos' Universal complete DDoS attack tool.
+         [SYNTAX] : -uddos <PROTOCOL> <PROTOCOL_TASK> <TARGET> <THREADS>
+         > '-uddos' Protocols:
+            '--http' Stress testing for HTTP websites.
+            > '--http' Tasks:
+                '-d' DDoS through multiple download requests.
+                '-g' DDoS through multiple get requests.
+                '-b' DDoS through multiple download and get requests. [SLOW]
+            '--https' Stress testing for HTTPS websites.
+            > '--https' Tasks:
+                '-d' DDoS through multiple download requests.
+                '-g' DDoS through multiple get requests.
+                '-b' DDoS through multiple download and get requests. [SLOW]
+            '--tcp' Stress testing for TCP servers.
+            > '--tcp' Tasks:
+                '-h' DDoS through packet flooding.
+                '-e' DDoS through multiple connection requests.
+                Target Format : <IP_Address>:<Port> ex: [127.0.0.1:80]
+                [WARNING] : The target TCP port MUST be open or the requests will bounce back!
+            '--udp' Stress testing for UDP servers.
+            > '--udp' Tasks:
+                '-h' DDoS through packet flooding.
+                '-e' DDoS through multiple connection requests.
+                Target Format : <IP_Address>:<Port> ex: [127.0.0.1:80]
+                [WARNING] : The target UDP port MUST be open or the requests will bounce back!
+>> Credits:
+Gloria mwah <33
+---------------------------------------------------
 ```
 Each tool has it's own command syntax. In WebSploit type '<TOOL'S NAME> -help' for the tool's command list.
 
