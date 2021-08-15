@@ -1,5 +1,5 @@
 # MDC-WebSploit 
-[![version-1.4](https://img.shields.io/badge/version-1.4-green)](https://github.com/MishDotCom/WebSploit/releases/tag/v1.4)
+[![version-1.5](https://img.shields.io/badge/version-1.5-green)](https://github.com/MishDotCom/WebSploit/releases/tag/v1.5)
 [![GPLv3](https://img.shields.io/badge/license-GPLv2-blue)](https://img.shields.io/badge/license-GPLv3-blue)
 [![C#](https://img.shields.io/badge/language-csharp-red)](https://img.shields.io/badge/language-c#-red)
 
