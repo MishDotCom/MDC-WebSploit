@@ -1,15 +1,13 @@
-# WebSploit 
-[![version-1.2](https://img.shields.io/badge/version-1.3-green)](https://github.com/MishDotCom/WebSploit/releases/tag/v1.3)
+#MDC-WebSploit 
+[![version-1.4](https://img.shields.io/badge/version-1.4-green)](https://github.com/MishDotCom/WebSploit/releases/tag/v1.4)
 [![GPLv3](https://img.shields.io/badge/license-GPLv2-blue)](https://img.shields.io/badge/license-GPLv3-blue)
 [![C#](https://img.shields.io/badge/language-csharp-red)](https://img.shields.io/badge/language-c#-red)
 
 <h2>Description</h2>
 
-**WebSploit** is a web stress testing and pentesting tool, offering a useful set of tools to perform **web level** attacks.
-
-<p align="center">
-<img align="center" src="img/wsss.png" width="900">
-</p>
+**WebSploit** is a web stress testing and pentesting tool, offering a useful set of tools to perform **web level** attacks. This app is meant to be ran in a command line interface
+with the approppiate arguments. This app is meant to combine hacking tools into one big menu to make hacking easier and more fun. MDC-WebSploit currently has tools for credential
+bruteforcing, information gathering and stress testing. In WebSploit 1.5 the Email-Cracker tool will be comatible with any SMTP server.
 
 Disclaimer: **I am under no circumstances responsible of any wrong way this app is used. Meant only for educational purposes and white hat hacking.**
 
