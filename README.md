@@ -13,7 +13,7 @@ Disclaimer: **I am under no circumstances responsible of any wrong way this app 
 
 <h2>Commands and Tools 🧰</h2>
 
-MDC-WebSploit is supposed tyo be ran in a terminal or a CLI. The commands and arguments are >>
+MDC-WebSploit is supposed to be ran in a terminal or a CLI. The commands and arguments are >>
 
 ```text
 ---------------------------------------------------
