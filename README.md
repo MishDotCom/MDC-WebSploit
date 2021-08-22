@@ -88,6 +88,8 @@ Gloria mwah <33
 2. Extract the folder and place it in a directory of your choice.<br>
 3. Run the file called <code>WebSploit.exe</code> in CMD or PowerShell as Administartor.<br>
 
+**OR** Download the windows installer from this link: https://github.com/MishDotCom/mdc-ws-installer/releases/download/v1.0/mdc-WebSploit.Installer.exe
+
 Disclaimer: **Do NOT remove any of the .dll files or the app will cease to work.**<br>
 
 <h2>For linux-debian:</h2>
