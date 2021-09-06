@@ -7,7 +7,7 @@
 
 **WebSploit** is a web stress testing and pentesting tool, offering a useful set of tools to perform **web level** attacks. This app is meant to be ran in a command line interface
 with the approppiate arguments. This app is meant to combine hacking tools into one big menu to make hacking easier and more fun. MDC-WebSploit currently has tools for credential
-bruteforcing, information gathering and stress testing. In WebSploit 1.5 the Email-Cracker tool will be compatible with any SMTP server.
+bruteforcing, information gathering and stress testing.
 
 Disclaimer: **I am under no circumstances responsible of any wrong way this app is used. Meant only for educational purposes and white hat hacking.**
 
@@ -17,21 +17,21 @@ MDC-WebSploit is supposed to be ran in a terminal or a CLI. The commands and arg
 
 ```text
 ---------------------------------------------------
-       MDC-WebSploit v1.4 CLI. Help Menu >>
+       MDC-WebSploit v1.6 CLI. Help Menu >>        
 ---------------------------------------------------
->> Information gathering: 
-'-prtsc' - Multithreaded port scanner. 
+>> Information gathering:
+'-prtsc' - Multithreaded port scanner.
        [SYNTAX] : -prtsc <TARGET> <OPTION>
-       > '-prtsc' Options: 
+       > '-prtsc' Options:
           '-p' Scans only one given port.
           '-P' Scans a given list of comma sepraretd ports.
           '--p <OPTION>' Scans built-in list of ports.
-                > '--p' Options: 
+                > '--p' Options:
                    '-20' Top 20 most common ports.
                    '-200' Top 200 most common ports.
-'-nscn' - Network scanning tool. 
-          [SYNATX] : -nscn <OPTION> <TARGET> 
-          > '-nscn' Options : 
+'-nscn' - Network scanning tool.
+          [SYNATX] : -nscn <OPTION> <TARGET>
+          > '-nscn' Options :
             '-gh' Retreives host of given website.
             '-ph <OPTION>' Pings a given host.
              > '-ph' Options: [OPTIONAL]
@@ -49,7 +49,9 @@ MDC-WebSploit is supposed to be ran in a terminal or a CLI. The commands and arg
              '-b' For built-in dictionaries.
              ex: [SYNATX] : -sshf <TARGET> -b -b
 '-ecrk' - Email (SMTP) credentials bruteforce app.
-          [SYNTAX] : -ecrk <SMTP_SERVER> <SMTP_PORT> <TARGET> <-P <PATH TO WORDLIST>/--p for built-in (rockyou.txt)> <OPT: -v for verbose>
+          [SYNTAX] : -ecrk <SMTP_SERVER> <OPT: '-s' for SSL> <SMTP_PORT> <TARGET> <-P <PATH TO WORDLIST>/--p for built-in (rockyou.txt)> <OPT: -v for verbose>
+'-webcrk' - Website login cracking tool.
+          [SYNTAX] : -webcrk <LOGIN_URL> <FORM DATA (separated by comma. mark the password field with [p] and the username field with [u].) ex: [u]email,[p]password, action:Login> <TARGET (username/email)> <-p <ONE password> / -P <path to wordlist> / --p (built-in : rockyou.txt)> <OPT: -v (for verbose)>
 >> Stress testing:
 '-uddos' Universal complete DDoS attack tool.
          [SYNTAX] : -uddos <PROTOCOL> <PROTOCOL_TASK> <TARGET> <THREADS>
