@@ -35,7 +35,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Net.Sockets;
 
-namespace Open_Port_Scanner
+namespace WebSploit.Open_Port_Scanner
 {
     class TcpPortScanner
     {

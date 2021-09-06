@@ -29,7 +29,7 @@ using System.IO;
 using System.Threading;
 using System.Net;
 
-namespace SshAttacker
+namespace WebSploit.SshAttacker
 {
     class Program
     {

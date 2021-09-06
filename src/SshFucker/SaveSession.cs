@@ -29,7 +29,7 @@
 using System;
 using System.IO;
 
-namespace SshAttacker
+namespace WebSploit.SshAttacker
 {
     class SaveSession
     {

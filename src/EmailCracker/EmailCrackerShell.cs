@@ -35,7 +35,7 @@ using System.Net.Security;
 using System.Net.Sockets;
 using System.Collections.Generic;
 
-namespace EmailCracker
+namespace WebSploit.EmailCracker
 {
     class Shell
     {

@@ -34,7 +34,7 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.IO;
 
-namespace FtpLogger
+namespace WebSploit.FtpLogger
 {
     class FtpAttacker
     {

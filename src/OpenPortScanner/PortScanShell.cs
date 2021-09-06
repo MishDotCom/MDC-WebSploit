@@ -29,7 +29,7 @@ using System.Net;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Open_Port_Scanner
+namespace WebSploit.Open_Port_Scanner
 {
     class Program
     {

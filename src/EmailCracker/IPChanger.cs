@@ -31,7 +31,7 @@ using System.Management;
 using System.Threading;
 using System.Net;
 
-namespace EmailCracker
+namespace WebSploit.EmailCracker
 {
     class IPChanger
     {

@@ -37,7 +37,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Net.Http;
 
-namespace UDDoS
+namespace WebSploit.UDDoS
 {
     class DDoS
     {

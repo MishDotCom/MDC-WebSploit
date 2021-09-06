@@ -29,7 +29,7 @@ using System.Net;
 using System.Web;
 using System.Threading.Tasks;
 
-namespace UDDoS
+namespace WebSploit.UDDoS
 {
     class Shell
     {
@@ -233,6 +233,33 @@ namespace UDDoS
                                             {
                                                 Task t = Task.Factory.StartNew(() => {
                                                     UDDoS.UdpDDoS.SendPackage(target[0], port, threads);
+                                                });
+                                                t.Wait();
+                                            }
+                                            else
+                                                InvalidSyntaxErr(command);
+                                        }
+                                        else
+                                            InvalidSyntaxErr(command);
+                                    }
+                                    else
+                                        InvalidSyntaxErr(command);
+                                } 
+                                else
+                                    InvalidSyntaxErr(command);
+                            }
+                            else if(command_words[2] == "-e")
+                            {
+                                string[] target = command_words[3].Split(':');
+                                if(target.Length == 2)
+                                {
+                                    if(isIpValid(target[0]))
+                                    {
+                                        if(Int32.TryParse(target[1], out int port) && port < 45505){
+                                            if(Int32.TryParse(command_words[4], out int threads))
+                                            {
+                                                Task t = Task.Factory.StartNew(() => {
+                                                    UDDoS.UdpDDoS.UdpConnectionFlood(target[0], port, threads);
                                                 });
                                                 t.Wait();
                                             }

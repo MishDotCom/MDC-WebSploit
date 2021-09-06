@@ -34,7 +34,7 @@ using System.Threading;
 using System.Net.Sockets;
 using Renci.SshNet;
 
-namespace SshAttacker
+namespace WebSploit.SshAttacker
 {
     class FileParser
     {

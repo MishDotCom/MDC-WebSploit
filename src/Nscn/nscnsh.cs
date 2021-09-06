@@ -26,7 +26,7 @@
  
 using System;
 
-namespace IpGrabber
+namespace WebSploit.Nscn
 {
     class Shell
     {
