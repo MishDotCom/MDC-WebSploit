@@ -85,6 +85,12 @@ Gloria mwah <33
 
 ## Installation ⚙️
 
+<h2>**Use the installer:**</h2>
+1. For Linux: https://github.com/MishDotCom/mdc-ws-installer/releases/download/v1.1/wsinstall32<br>
+2. For Windows: https://github.com/MishDotCom/mdc-ws-installer/releases/download/v1.1/wsinstall32.exe
+
+<h2>Manual Instalation:</h2>
+
 <h2>For windows:</h2>
 1. Download the folder called <code>websploit win-x86.zip</code>.<br>
 2. Extract the folder and place it in a directory of your choice.<br>
