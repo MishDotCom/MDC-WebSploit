@@ -78,8 +78,6 @@ MDC-WebSploit is supposed to be ran in a terminal or a CLI. The commands and arg
                 '-e' DDoS through multiple connection requests.
                 Target Format : <IP_Address>:<Port> ex: [127.0.0.1:80]
                 [WARNING] : The target UDP port MUST be open or the requests will bounce back!
->> Credits:
-Gloria mwah <33
 ---------------------------------------------------
 ```
 
@@ -106,8 +104,3 @@ Disclaimer: **Do NOT remove any of the .dll files or the app will cease to work.
 3. Open a terminal and CD into the folder.<br>
 4. Run <code>chmod 777 ./WebSploit</code><br>
 5. Run the app using <code>sudo ./WebSploit</code><br>
-
-## Credits 💡
-
-**Gloria <33**
-
